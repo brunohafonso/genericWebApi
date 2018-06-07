@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\generic.application.domain\generic.application.domain.csproj" />
+    <ProjectReference Include="..\generic.application.repository\generic.application.repository.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.8" />
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="5.2.2" />
+    <PackageReference Include="Sendgrid" Version="9.9.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="2.2.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="2.2.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUi" Version="2.2.0" />
+  </ItemGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>bin\DEBUG\netcoreapp2.0\GenericAPI.xml</DocumentationFile>
+  </PropertyGroup>
+
+</Project>
